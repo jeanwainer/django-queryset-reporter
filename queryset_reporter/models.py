@@ -87,6 +87,8 @@ class DisplayField(FieldModel):
     )
     position = models.PositiveSmallIntegerField(**_NULL)
 
+    distinct = models.BooleanField(default=False)
+
     pre_concatenate = models.CharField(
         verbose_name=_(u'Pré concatenação'), **_CNULL
     )

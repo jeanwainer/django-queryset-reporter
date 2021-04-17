@@ -127,9 +127,14 @@ class Reporter(object):
 
     def _fields_list(self):
         fields_list = []
+        distinct_fields = set()
         for f in self.fields:
             if not f.annotate:
                 fields_list.append(f.field)
+            if f.distinct:
+                distinct_fields.add(f.field)
+        if distinct_fields:
+            self._rqs = self._rqs.distinct(*distinct_fields)
         return fields_list
 
     def _order_by(self):

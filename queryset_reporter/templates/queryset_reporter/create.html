@@ -9,13 +9,13 @@
 <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4>{% trans "XLSX gerado" %}</h4>
-  {% trans "Acesse-o através desta URL: " %}<a href="{{ rendered_xlsx }}">{{ rendered_xlsx }}</a>
+  {% trans "Acesse-o através desta URL: " %}<a href="{{ rendered_xlsx }}" target="_blank">{{ rendered_xlsx }}</a>
 </div>
 {% elif rendered_csv %}
 <div class="alert alert-success">
   <button type="button" class="close" data-dismiss="alert">&times;</button>
   <h4>{% trans "CSV gerado" %}</h4>
-  {% trans "Acesse-o através desta URL: " %}<a href="{{ rendered_csv }}">{{ rendered_csv }}</a>
+  {% trans "Acesse-o através desta URL: " %}<a href="{{ rendered_csv }}" target="_blank">{{ rendered_csv }}</a>
 </div>
 {% endif %}
 
